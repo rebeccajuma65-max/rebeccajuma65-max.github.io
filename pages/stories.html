@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Impact Stories & Voices | Sudan Women Empower</title>
+  <meta name="description" content="Discover true stories of resilience, leadership, and transformation from Sudanese women reclaiming their futures across Sudan.">
+  <link rel="icon" type="image/png" href="../assets/sudan-logo.png">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .story-card {
+      background: var(--bg-card);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--border-light);
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      transition: all var(--transition-normal);
+    }
+    .story-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-xl);
+    }
+    .story-img-wrap {
+      height: 240px;
+      position: relative;
+      overflow: hidden;
+    }
+    .story-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform var(--transition-slow);
+    }
+    .story-card:hover .story-img {
+      transform: scale(1.06);
+    }
+    .story-category-tag {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background: rgba(109, 23, 79, 0.9);
+      color: #FFF;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 5px 12px;
+      border-radius: var(--radius-full);
+      backdrop-filter: blur(4px);
+    }
+    .story-content {
+      padding: 26px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+    .story-author-meta {
+      font-size: 0.85rem;
+      color: var(--accent-gold-dark);
+      font-weight: 700;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .story-title {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 12px;
+      line-height: 1.35;
+    }
+    .story-excerpt {
+      font-size: 0.94rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-bottom: 20px;
+      flex-grow: 1;
+    }
+    .story-badge-impact {
+      background: var(--primary-soft);
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 0.82rem;
+      padding: 6px 12px;
+      border-radius: var(--radius-sm);
+      display: inline-block;
+      margin-bottom: 16px;
+    }
+    .filter-bar {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 45px;
+    }
+    .filter-btn {
+      padding: 10px 20px;
+      border-radius: var(--radius-full);
+      border: 1.5px solid var(--border-light);
+      background: #FFF;
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: all var(--transition-fast);
+    }
+    .filter-btn:hover, .filter-btn.active {
+      background: var(--primary);
+      color: #FFF;
+      border-color: var(--primary);
+      box-shadow: var(--shadow-sm);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ================= TOP ANNOUNCEMENT BAR ================= -->
+  <div class="announcement-bar">
+    <div class="container" style="display:flex; justify-content:space-between; align-items:center; width:100%;">
+      <div class="announcement-text">
+        <span class="badge">Real Stories</span>
+        <span>Every number is a human life. Read how Sudanese women are reclaiming peace and dignity.</span>
+      </div>
+      <div class="announcement-contact">
+        <a href="mailto:rebeccajuma65@gmail.com">✉️ rebeccajuma65@gmail.com</a>
+        <a href="tel:+254758102740">📞 +254 758 102 740</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= SITE HEADER ================= -->
+  <header class="site-header">
+    <div class="container">
+      <div class="nav-wrapper">
+        <a href="index.html" class="brand" aria-label="Sudan Women Empower Home">
+          <div class="brand-logo-wrapper">
+            <img src="../assets/sudan-logo.png" alt="Sudan Women Logo">
+          </div>
+          <div class="brand-text">
+            <span class="brand-title">SUDAN WOMEN</span>
+            <span class="brand-tagline">Her Voice &bull; Her Strength &bull; Her Future</span>
+          </div>
+        </a>
+
+        <nav class="nav-menu" aria-label="Primary Navigation">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="about.html" class="nav-link">About Us</a>
+          <a href="services.html" class="nav-link">Programs & Services</a>
+          <a href="stories.html" class="nav-link active">Impact Stories</a>
+          <a href="join.html" class="nav-link">Get Involved</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+          <button class="btn-donate" data-open-modal="donationModal">
+            <span>❤️ support women</span>
+          </button>
+        </div>
+
+        <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= PAGE BANNER ================= -->
+  <section class="page-banner">
+    <div class="container">
+      <div class="banner-breadcrumb">
+        <a href="index.html">Home</a> &bull; <span>Impact Stories</span>
+      </div>
+      <h1 class="banner-title">Voices of Strength &amp; Transformation</h1>
+      <p class="banner-desc">
+        First-person accounts of bravery, ingenuity, and community leadership from women standing on the frontlines of Sudan's recovery.
+      </p>
+    </div>
+  </section>
+
+  <!-- ================= FEATURED DEEP-DIVE STORY ================= -->
+  <section class="section">
+    <div class="container">
+      <div class="spotlight-card">
+        <div class="spotlight-media">
+          <img src="../assets/The-woman.jpg" alt="Rebecca Juma" class="spotlight-img">
+        </div>
+        <div class="spotlight-content">
+          <div class="spotlight-tag">Featured Leadership Chronicle &bull; Grassroots Impact</div>
+          <h2 class="section-title" style="font-size: 1.85rem; margin-bottom: 14px;">
+            "They Took Our Homes, But Never Our Agency"
+          </h2>
+          <blockquote class="spotlight-quote" style="font-size: 1.15rem;">
+            "When conflict tore through our communities, we refused to let hope be extinguished. With each safe haven and micro-grant co-op established, we empower mothers and daughters to lead their own recovery and build an enduring, peaceful future."
+          </blockquote>
+          <div class="spotlight-author">Rebecca Juma</div>
+          <div class="spotlight-role">Founder &amp; Executive Director &bull; Sudan Women Empower</div>
+          <div>
+            <button class="btn btn-gold" data-open-modal="donationModal">Support Rebecca's Mission</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= STORIES GRID WITH INTERACTIVE FILTER ================= -->
+  <section class="section section-bg-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Field Chronicles</span>
+        <h2 class="section-title">Stories From Across Sudan</h2>
+        <p class="section-description">
+          Filter through inspiring testimonies of leadership, entrepreneurship, and sisterhood.
+        </p>
+      </div>
+
+      <!-- Filter Controls -->
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">All Stories (6)</button>
+        <button class="filter-btn" data-filter="education">Education</button>
+        <button class="filter-btn" data-filter="enterprise">Enterprise</button>
+        <button class="filter-btn" data-filter="health">Health &amp; Midwifery</button>
+        <button class="filter-btn" data-filter="leadership">Leadership &amp; Peace</button>
+      </div>
+
+      <div class="grid-3">
+
+        <!-- Story 1 -->
+        <div class="story-card filter-item" data-category="education">
+          <div class="story-img-wrap">
+            <img src="../assets/pexels-ahmed-abubakar-bature-463655216-31537320.jpg" alt="Alaa teaching under shelter" class="story-img">
+            <span class="story-category-tag">Education</span>
+          </div>
+          <div class="story-content">
+            <div class="story-author-meta">Kassala &bull; By Alaa, Age 21</div>
+            <h3 class="story-title">The Classroom Beneath the Acacia Tree</h3>
+            <p class="story-excerpt">
+              When formal high schools shut their doors, university student Alaa established an outdoor learning circle. Equipped with solar lanterns and tablets, she prepares 45 teenage girls for their secondary exams.
+            </p>
+            <div class="story-badge-impact">✨ 45 Girls Kept Learning</div>
+            <button class="btn btn-secondary btn-sm" data-open-modal="donationModal">Support Student Circles</button>
+          </div>
+        </div>
+
+        <!-- Story 2 -->
+        <div class="story-card filter-item" data-category="enterprise">
+          <div class="story-img-wrap">
+            <img src="../assets/pexels-speakmediauganda-27471152.jpg" alt="Traditional weavers working" class="story-img">
+            <span class="story-category-tag">Enterprise</span>
+          </div>
+          <div class="story-content">
+            <div class="story-author-meta">River Nile &bull; By Zainab &amp; Collective</div>
+            <h3 class="story-title">Spinning Cotton Into Sovereign Livelihoods</h3>
+            <p class="story-excerpt">
+              Combining ancient Sudanese loom artistry with modern design, Zainab’s collective turned a small seed loan into a thriving textile guild that sustains 12 families without relying on food handouts.
+            </p>
+            <div class="story-badge-impact">✨ 12 Households Self-Sustaining</div>
+            <button class="btn btn-secondary btn-sm" data-open-modal="donationModal">Seed an Artisan Loan</button>
+          </div>
+        </div>
+
+        <!-- Story 3 -->
+        <div class="story-card filter-item" data-category="leadership">
+          <div class="story-img-wrap">
+            <img src="../assets/women-huging.jpg" alt="Community reconciliation meeting" class="story-img">
+            <span class="story-category-tag">Leadership</span>
+          </div>
+          <div class="story-content">
+            <div class="story-author-meta">Al Jazirah &bull; By Fatima &amp; Rania</div>
+            <h3 class="story-title">Two Mothers Who Broke the Cycle of Feud</h3>
+            <p class="story-excerpt">
+              When local tensions threatened to turn neighboring farming communities against each other, Fatima and Rania led a joint water-sharing council that restored peace and established shared grain reserves.
+            </p>
+            <div class="story-badge-impact">✨ 1,200 Residents Protected</div>
+            <button class="btn btn-secondary btn-sm" data-open-modal="donationModal">Fund Local Mediators</button>
+          </div>
+        </div>
+
+        <!-- Story 4 -->
+        <div class="story-card filter-item" data-category="health">
+          <div class="story-img-wrap">
+            <img src="../assets/pexels-detty-images-2148597567-37288241.jpg" alt="Midwife caring for newborn" class="story-img">
+            <span class="story-category-tag">Health</span>
+          </div>
+          <div class="story-content">
+            <div class="story-author-meta">Darfur Enclave &bull; By Maryam, Midwife</div>
+            <h3 class="story-title">Midnight Deliveries in the Shadow of Crisis</h3>
+            <p class="story-excerpt">
+              Traveling by foot through unpaved valleys with our mobile maternal emergency kit, midwife Maryam has brought 140 healthy babies into the world without losing a single mother to preventable hemorrhage.
+            </p>
+            <div class="story-badge-impact">✨ 140 Zero-Complication Births</div>
+            <button class="btn btn-secondary btn-sm" data-open-modal="donationModal">Equip a Midwife</button>
+          </div>
+        </div>
+
+        <!-- Story 5 -->
+        <div class="story-card filter-item" data-category="education">
+          <div class="story-img-wrap">
+            <img src="../assets/pexels-jedidiahjordan-20518586.jpg" alt="Youth digital training" class="story-img">
+            <span class="story-category-tag">Youth</span>
+          </div>
+          <div class="story-content">
+            <div class="story-author-meta">Port Sudan &bull; By Safia, Age 19</div>
+            <h3 class="story-title">The Solar-Powered Digital Guild</h3>
+            <p class="story-excerpt">
+              In a crowded transit center, Safia built a coding and translation workshop powered by two solar panels. Today, 60 young women earn international freelance wages to support their displaced parents.
+            </p>
+            <div class="story-badge-impact">✨ 60 Girls Earning Remotely</div>
+            <button class="btn btn-secondary btn-sm" data-open-modal="donationModal">Fund Digital Hubs</button>
+          </div>
+        </div>
+
+        <!-- Story 6 -->
+        <div class="story-card filter-item" data-category="leadership">
+          <div class="story-img-wrap">
+            <img src="../assets/pexels-sendeq-dagi-2162943796-40292107.jpg" alt="Legal aid advocate" class="story-img">
+            <span class="story-category-tag">Leadership</span>
+          </div>
+          <div class="story-content">
+            <div class="story-author-meta">Khartoum &bull; By Counselor Rawia</div>
+            <h3 class="story-title">Advocating for the Unheard at Dawn</h3>
+            <p class="story-excerpt">
+              Defending women unjustly targeted under emergency decrees, Rawia’s volunteer legal team successfully secured releases for 85 arbitrary detainees and established legal safehouses for GBV survivors.
+            </p>
+            <div class="story-badge-impact">✨ 85 Freedom Rulings Won</div>
+            <button class="btn btn-secondary btn-sm" data-open-modal="donationModal">Back Pro-Bono Counsel</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SUBMIT YOUR STORY INTAKE ================= -->
+  <section class="section" id="submit-story">
+    <div class="container container-narrow">
+      <div class="form-card">
+        <div class="section-header" style="margin-bottom: 28px;">
+          <span class="section-subtitle">Community Voices</span>
+          <h2 class="section-title" style="font-size: 2rem;">Share Your Story or Testimony</h2>
+          <p class="section-description" style="font-size: 0.95rem;">
+            Are you a Sudanese woman, community volunteer, or aid worker? We want to elevate your experience. All submissions can be anonymized upon request.
+          </p>
+        </div>
+
+        <form data-handle="true" data-success="Thank you for sharing your powerful voice. Our editorial team will review your story with immense care and respect.">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Your Name or Pseudonym <span class="required">*</span></label>
+              <input type="text" class="form-control" placeholder="E.g., Rebecca Juma" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Location / Town in Sudan <span class="required">*</span></label>
+              <input type="text" class="form-control" placeholder="E.g., Omdurman or Port Sudan" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Story Headline / Title <span class="required">*</span></label>
+            <input type="text" class="form-control" placeholder="What is the core focus of your reflection?" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Your Story or Field Reflection <span class="required">*</span></label>
+            <textarea class="form-control" placeholder="Share your experience, achievements, struggles, and hopes for Sudanese women..." style="min-height: 140px;" required></textarea>
+          </div>
+
+          <div class="form-group">
+            <label style="display:flex; align-items:center; gap: 8px; font-size:0.9rem; cursor:pointer;">
+              <input type="checkbox" checked>
+              <span>Keep my identity anonymous for safety and privacy.</span>
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg" style="width:100%;">
+            Submit Your Testimony &rarr;
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SITE FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img src="../assets/sudan-logo.png" alt="Sudan Women Logo" class="footer-logo-img">
+            <div>
+              <div class="footer-brand-title">SUDAN WOMEN EMPOWER</div>
+              <div class="footer-brand-tagline">Her Voice &bull; Her Strength &bull; Her Future</div>
+            </div>
+          </div>
+          <p class="footer-bio">
+            An independent grassroots initiative championing the rights, dignity, education, and livelihood of women and girls throughout Sudan and the international diaspora.
+          </p>
+          <div style="margin-bottom: 18px; font-size: 0.88rem; display: flex; flex-direction: column; gap: 6px;">
+            <span>📧 <a href="mailto:rebeccajuma65@gmail.com" style="color: var(--accent-gold); text-decoration: underline;">rebeccajuma65@gmail.com</a></span>
+            <span>📞 <a href="tel:+254758102740" style="color: var(--accent-gold); text-decoration: underline;">+254 758 102 740</a></span>
+          </div>
+          <div class="footer-socials">
+            <a href="https://twitter.com" target="_blank" rel="noopener" class="social-icon" aria-label="Twitter">𝕏</a>
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="social-icon" aria-label="Facebook">f</a>
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram">📸</a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn">in</a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="footer-heading">Quick Navigation</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Our Mission</a></li>
+            <li><a href="services.html">Programs &amp; Services</a></li>
+            <li><a href="stories.html">Voices &amp; Impact</a></li>
+            <li><a href="join.html">Get Involved / Volunteer</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-heading">Our Core Programs</h3>
+          <ul class="footer-links">
+            <li><a href="services.html#education">Girls' Education Fund</a></li>
+            <li><a href="services.html#economic">Artisan &amp; Micro-Grants</a></li>
+            <li><a href="services.html#healthcare">Maternal Clinic Support</a></li>
+            <li><a href="services.html#justice">Legal Defense &amp; GBV Aid</a></li>
+            <li><a href="services.html#peace">Peacebuilding Circles</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-heading">Newsletter &amp; Updates</h3>
+          <p class="footer-newsletter-text">
+            Join 15,000+ advocates worldwide receiving monthly dispatches from our grassroots teams.
+          </p>
+          <form class="newsletter-form">
+            <input type="email" class="newsletter-input" placeholder="Enter your email address" required>
+            <button type="submit" class="btn btn-gold btn-sm">Subscribe Free</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Sudan Women Empower Initiative. All Rights Reserved. Non-Profit NGO Network.
+        </div>
+        <div style="display:flex; gap: 20px;">
+          <a href="contact.html">Privacy Policy</a>
+          <a href="contact.html">Terms of Service</a>
+          <a href="contact.html">Financial Transparency</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= DONATION MODAL ================= -->
+  <div class="modal-backdrop" id="donationModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-window">
+      <div class="modal-header">
+        <h3 class="modal-title" id="modalTitle">Support Sudanese Women</h3>
+        <button class="modal-close" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p style="font-size:0.92rem; color:var(--text-secondary); margin-bottom:18px;">
+          Your donation directly funds emergency dignity packs, schooling scholarships, and women-led cooperative business funds.
+        </p>
+
+        <form id="donationForm">
+          <div class="form-group">
+            <label class="form-label">Select Contribution Frequency</label>
+            <div class="donation-freq-toggle">
+              <button type="button" class="freq-btn active">One-Time Gift</button>
+              <button type="button" class="freq-btn">Monthly Patron</button>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Gift Amount (USD)</label>
+            <div class="donation-amounts">
+              <button type="button" class="amount-btn active" data-amount="25">$25</button>
+              <button type="button" class="amount-btn" data-amount="50">$50</button>
+              <button type="button" class="amount-btn" data-amount="100">$100</button>
+              <button type="button" class="amount-btn" data-amount="250">$250</button>
+            </div>
+            <div class="custom-amount-wrapper">
+              <span class="custom-currency">$</span>
+              <input type="number" class="custom-amount-input" value="25" min="5" placeholder="Custom amount">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Direct My Support To:</label>
+            <select class="form-control">
+              <option value="where-needed-most">Where Needed Most (Emergency Response)</option>
+              <option value="girls-education">Girls' Schooling &amp; Scholarship Fund</option>
+              <option value="micro-grants">Women's Entrepreneurship &amp; Micro-Grants</option>
+              <option value="maternal-health">Maternal Healthcare &amp; Trauma Recovery</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Full Name <span class="required">*</span></label>
+            <input type="text" class="form-control" placeholder="Rebecca Juma" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Email Address <span class="required">*</span></label>
+            <input type="email" class="form-control" placeholder="rebeccajuma65@gmail.com" required>
+          </div>
+
+          <button type="submit" class="btn btn-gold btn-lg" style="width:100%; margin-top:8px;">
+            Complete Secure Donation &rarr;
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="../main.js"></script>
+</body>
+</html>
+
+

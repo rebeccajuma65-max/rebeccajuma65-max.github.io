@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Programs & Services | Sudan Women Empower</title>
+  <meta name="description" content="Explore our grassroots programs: emergency dignity aid, girls' scholarships, women's micro-grants, maternal healthcare, legal defense, and peacebuilding circles.">
+  <link rel="icon" type="image/png" href="./assets/sudan-logo.png">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .filter-bar {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 45px;
+    }
+    .filter-btn {
+      padding: 10px 20px;
+      border-radius: var(--radius-full);
+      border: 1.5px solid var(--border-light);
+      background: #FFF;
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: all var(--transition-fast);
+    }
+    .filter-btn:hover, .filter-btn.active {
+      background: var(--primary);
+      color: #FFF;
+      border-color: var(--primary);
+      box-shadow: var(--shadow-sm);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ================= TOP ANNOUNCEMENT BAR ================= -->
+  <div class="announcement-bar">
+    <div class="container" style="display:flex; justify-content:space-between; align-items:center; width:100%;">
+      <div class="announcement-text">
+        <span class="badge">Programs Update</span>
+        <span>Over 24,800 women and children served across 6 core humanitarian and development tracks.</span>
+      </div>
+      <div class="announcement-contact">
+        <a href="mailto:rebeccajuma65@gmail.com">✉️ rebeccajuma65@gmail.com</a>
+        <a href="tel:+254758102740">📞 +254 758 102 740</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= SITE HEADER ================= -->
+  <header class="site-header">
+    <div class="container">
+      <div class="nav-wrapper">
+        <a href="index.html" class="brand" aria-label="Sudan Women Empower Home">
+          <div class="brand-logo-wrapper">
+            <img src="./assets/sudan-logo.png" alt="Sudan Women Logo">
+          </div>
+          <div class="brand-text">
+            <span class="brand-title">SUDAN WOMEN</span>
+            <span class="brand-tagline">Her Voice &bull; Her Strength &bull; Her Future</span>
+          </div>
+        </a>
+
+        <nav class="nav-menu" aria-label="Primary Navigation">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="about.html" class="nav-link">About Us</a>
+          <a href="services.html" class="nav-link active">Services</a>
+          <a href="stories.html" class="nav-link">Impact</a>
+          <a href="join.html" class="nav-link">Get Involved</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+          <button class="btn-donate" data-open-modal="donationModal">
+            <span>support</span>
+          </button>
+        </div>
+
+        <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= PAGE BANNER ================= -->
+  <section class="page-banner">
+    <div class="container">
+      <div class="banner-breadcrumb">
+        <a href="index.html">Home</a> &bull; <span>Programs &amp; Services</span>
+      </div>
+      <h1 class="banner-title">Our Programs &amp; Grassroots Services</h1>
+      <p class="banner-desc">
+        Delivering rapid humanitarian protection alongside long-term systemic support to empower Sudanese women to rebuild communities, achieve financial self-reliance, and lead civic change.
+      </p>
+    </div>
+  </section>
+
+  <!-- ================= PROGRAM GRID WITH FILTER ================= -->
+  <section class="section">
+    <div class="container">
+      <!-- Interactive Filter Bar -->
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">All Programs (6)</button>
+        <button class="filter-btn" data-filter="emergency">Emergency Relief</button>
+        <button class="filter-btn" data-filter="education">Education &amp; Literacy</button>
+        <button class="filter-btn" data-filter="enterprise">Micro-Enterprise</button>
+        <button class="filter-btn" data-filter="health">Health &amp; Healing</button>
+        <button class="filter-btn" data-filter="justice">Legal &amp; Peace</button>
+      </div>
+
+      <!-- 6 Program Cards -->
+      <div class="grid-3">
+
+        <!-- Program 1 -->
+        <div class="program-card filter-item" data-category="emergency" id="relief">
+          <div class="program-thumb-wrapper">
+            <img src="./assets/women-huging.jpg" alt="Emergency Safe Havens" class="program-thumb">
+            <span class="program-badge">Emergency Response</span>
+          </div>
+          <div class="program-body">
+            <h3 class="program-title">Safe Havens &amp; Dignity Aid Kits</h3>
+            <p class="program-desc">
+              Providing urgent emergency food baskets, clean water purification tabs, and comprehensive maternal hygiene and dignity kits to internally displaced women fleeing active conflict zones.
+            </p>
+            <div class="program-impact">
+              <span>📦 18,200 Kits Delivered</span>
+            </div>
+            <button class="btn btn-secondary btn-sm" data-open-modal="donationModal">Sponsor a Dignity Kit</button>
+          </div>
+        </div>
+
+        <!-- Program 2 -->
+        <div class="program-card filter-item" data-category="education" id="education">
+          <div class="program-thumb-wrapper">
+            <img src="./assets/pexels-ahmed-abubakar-bature-463655216-31537320.jpg" alt="Kandaka Girls Scholarship Fund" class="program-thumb">
+            <span class="program-badge">Education &amp; Youth</span>
+          </div>
+          <div class="program-body">
+            <h3 class="program-title">Kandaka Girls Scholarship Fund</h3>
+            <p class="program-desc">
+              Ensuring girls displaced from school receive full tuition, books, solar study lanterns, and digital learning modules to keep their academic dreams alive during crises.
+            </p>
+            <div class="program-impact">
+              <span>🎓 1,420 Girls Back in Class</span>
+            </div>
+            <button class="btn btn-secondary btn-sm" data-open-modal="donationModal">Fund a Girl's Tuition</button>
+          </div>
+        </div>
+
+        <!-- Program 3 -->
+        <div class="program-card filter-item" data-category="enterprise" id="economic">
+          <div class="program-thumb-wrapper">
+            <img src="./assets/pexels-speakmediauganda-27471152.jpg" alt="Artisan Micro-Finance Co-op" class="program-thumb">
+            <span class="program-badge">Economic Autonomy</span>
+          </div>
+          <div class="program-body">
+            <h3 class="program-title">Artisan &amp; Agro-Business Co-Ops</h3>
+            <p class="program-desc">
+              Supplying seed micro-grants ($150–$500), business literacy mentoring, and direct market linkage for women producing textiles, culinary goods, and sustainable soap.
+            </p>
+            <div class="program-impact">
+              <span>💼 420+ Co-Ops Operational</span>
+            </div>
+            <button class="btn btn-secondary btn-sm" data-open-modal="donationModal">Seed a Women's Co-Op</button>
+          </div>
+        </div>
+
+        <!-- Program 4 -->
+        <div class="program-card filter-item" data-category="health" id="healthcare">
+          <div class="program-thumb-wrapper">
+            <img src="./assets/pexels-detty-images-2148597567-37288241.jpg" alt="Mobile Maternal Health Unit" class="program-thumb">
+            <span class="program-badge">Healthcare &amp; Wellness</span>
+          </div>
+          <div class="program-body">
+            <h3 class="program-title">Mobile Maternal Clinics &amp; Healing</h3>
+            <p class="program-desc">
+              Mobile clinics staffed by courageous Sudanese midwives providing prenatal checkups, clean birthing kits, and trauma-informed mental healing circles for survivors.
+            </p>
+            <div class="program-impact">
+              <span>🩺 8,900+ Medical Visits</span>
+            </div>
+            <button class="btn btn-secondary btn-sm" data-open-modal="donationModal">Support Mobile Clinics</button>
+          </div>
+        </div>
+
+        <!-- Program 5 -->
+        <div class="program-card filter-item" data-category="justice" id="justice">
+          <div class="program-thumb-wrapper">
+            <img src="./assets/pexels-sendeq-dagi-2162943796-40292107.jpg" alt="Legal Defense and GBV Counsel" class="program-thumb">
+            <span class="program-badge">Human Rights</span>
+          </div>
+          <div class="program-body">
+            <h3 class="program-title">Legal Defense &amp; GBV Advocacy</h3>
+            <p class="program-desc">
+              Pro-bono legal counsel, emergency protection relocation, and international treaty documentation for women facing violence, land dispossession, or systemic discrimination.
+            </p>
+            <div class="program-impact">
+              <span>⚖️ 530+ Survivors Protected</span>
+            </div>
+            <button class="btn btn-secondary btn-sm" data-open-modal="donationModal">Fund Legal Defense</button>
+          </div>
+        </div>
+
+        <!-- Program 6 -->
+        <div class="program-card filter-item" data-category="justice" id="peace">
+          <div class="program-thumb-wrapper">
+            <img src="./assets/women.jpg" alt="Inter-Tribal Peace Circles" class="program-thumb">
+            <span class="program-badge">Civic Leadership</span>
+          </div>
+          <div class="program-body">
+            <h3 class="program-title">Inter-Tribal Peace Circles</h3>
+            <p class="program-desc">
+              Convening women elders, youth activists, and regional leaders from all states of Sudan to negotiate local ceasefires, de-escalate community friction, and foster reconciliation.
+            </p>
+            <div class="program-impact">
+              <span>🕊️ 18 Active Peace Circles</span>
+            </div>
+            <button class="btn btn-secondary btn-sm" data-open-modal="donationModal">Support Peacebuilding</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= INTAKE & REFERRAL SECTION ================= -->
+  <section class="section section-bg-alt" id="referral">
+    <div class="container container-narrow">
+      <div class="form-card">
+        <div class="section-header" style="margin-bottom: 30px;">
+          <span class="section-subtitle">Grassroots Assistance Intake</span>
+          <h2 class="section-title" style="font-size: 2rem;">Refer a Woman or Request Support</h2>
+          <p class="section-description" style="font-size: 0.95rem;">
+            Are you a Sudanese woman seeking education aid, micro-finance, or trauma support? Or do you know a family in urgent need? Fill out this confidential referral.
+          </p>
+        </div>
+
+        <form data-handle="true" data-success="Your program referral has been safely received. A field coordinator will reach out confidentially within 48 hours.">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Contact Person Name <span class="required">*</span></label>
+              <input type="text" class="form-control" placeholder="Rebecca Juma" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Email or Phone Number <span class="required">*</span></label>
+              <input type="text" class="form-control" placeholder="rebeccajuma65@gmail.com or +254 758 102 740" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Location / State in Sudan <span class="required">*</span></label>
+              <select class="form-control" required>
+                <option value="">Select state or area...</option>
+                <option value="khartoum">Khartoum / Omdurman / Bahri</option>
+                <option value="portsudan">Red Sea / Port Sudan</option>
+                <option value="gezira">Al Jazirah State</option>
+                <option value="kordofan">North / South / West Kordofan</option>
+                <option value="darfur">Darfur States (North, South, Central)</option>
+                <option value="kassala">Kassala &amp; Gedaref</option>
+                <option value="diaspora">Refugee in Neighboring Country (Egypt, Chad, etc.)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Program of Interest <span class="required">*</span></label>
+              <select class="form-control" required>
+                <option value="relief">Emergency Safe Haven &amp; Food/Dignity Aid</option>
+                <option value="scholarship">Girls' Scholarship &amp; Schooling</option>
+                <option value="business">Artisan Seed Grant &amp; Co-op</option>
+                <option value="health">Maternal Care &amp; Psychological Support</option>
+                <option value="legal">Legal Protection &amp; GBV Defense</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Brief Description of Circumstance or Need <span class="required">*</span></label>
+            <textarea class="form-control" placeholder="Please provide any relevant details so we can connect you with the nearest team. Confidentiality guaranteed." required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg" style="width:100%;">
+            Submit Confidential Referral &rarr;
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SITE FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img src="./assets/sudan-logo.png" alt="Sudan Women Logo" class="footer-logo-img">
+            <div>
+              <div class="footer-brand-title">SUDAN WOMEN EMPOWER</div>
+              <div class="footer-brand-tagline">Her Voice &bull; Her Strength &bull; Her Future</div>
+            </div>
+          </div>
+          <p class="footer-bio">
+            An independent grassroots initiative championing the rights, dignity, education, and livelihood of women and girls throughout Sudan and the international diaspora.
+          </p>
+          <div style="margin-bottom: 18px; font-size: 0.88rem; display: flex; flex-direction: column; gap: 6px;">
+            <span>📧 <a href="mailto:rebeccajuma65@gmail.com" style="color: var(--accent-gold); text-decoration: underline;">rebeccajuma65@gmail.com</a></span>
+            <span>📞 <a href="tel:+254758102740" style="color: var(--accent-gold); text-decoration: underline;">+254 758 102 740</a></span>
+          </div>
+          <div class="footer-socials">
+            <a href="https://twitter.com" target="_blank" rel="noopener" class="social-icon" aria-label="Twitter">𝕏</a>
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="social-icon" aria-label="Facebook">f</a>
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram">📸</a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn">in</a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="footer-heading">Quick Navigation</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Our Mission</a></li>
+            <li><a href="services.html">Programs &amp; Services</a></li>
+            <li><a href="stories.html">Voices &amp; Impact</a></li>
+            <li><a href="join.html">Get Involved / Volunteer</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-heading">Our Core Programs</h3>
+          <ul class="footer-links">
+            <li><a href="services.html#education">Girls' Education Fund</a></li>
+            <li><a href="services.html#economic">Artisan &amp; Micro-Grants</a></li>
+            <li><a href="services.html#healthcare">Maternal Clinic Support</a></li>
+            <li><a href="services.html#justice">Legal Defense &amp; GBV Aid</a></li>
+            <li><a href="services.html#peace">Peacebuilding Circles</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-heading">Newsletter &amp; Updates</h3>
+          <p class="footer-newsletter-text">
+            Join 15,000+ advocates worldwide receiving monthly dispatches from our grassroots teams.
+          </p>
+          <form class="newsletter-form">
+            <input type="email" class="newsletter-input" placeholder="Enter your email address" required>
+            <button type="submit" class="btn btn-gold btn-sm">Subscribe Free</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Sudan Women Empower Initiative. All Rights Reserved. Non-Profit NGO Network.
+        </div>
+        <div style="display:flex; gap: 20px;">
+          <a href="contact.html">Privacy Policy</a>
+          <a href="contact.html">Terms of Service</a>
+          <a href="contact.html">Financial Transparency</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= DONATION MODAL ================= -->
+  <div class="modal-backdrop" id="donationModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-window">
+      <div class="modal-header">
+        <h3 class="modal-title" id="modalTitle">Support Sudanese Women</h3>
+        <button class="modal-close" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p style="font-size:0.92rem; color:var(--text-secondary); margin-bottom:18px;">
+          Your donation directly funds emergency dignity packs, schooling scholarships, and women-led cooperative business funds.
+        </p>
+
+        <form id="donationForm">
+          <div class="form-group">
+            <label class="form-label">Select Contribution Frequency</label>
+            <div class="donation-freq-toggle">
+              <button type="button" class="freq-btn active">One-Time Gift</button>
+              <button type="button" class="freq-btn">Monthly Patron</button>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Gift Amount (USD)</label>
+            <div class="donation-amounts">
+              <button type="button" class="amount-btn active" data-amount="25">$25</button>
+              <button type="button" class="amount-btn" data-amount="50">$50</button>
+              <button type="button" class="amount-btn" data-amount="100">$100</button>
+              <button type="button" class="amount-btn" data-amount="250">$250</button>
+            </div>
+            <div class="custom-amount-wrapper">
+              <span class="custom-currency">$</span>
+              <input type="number" class="custom-amount-input" value="25" min="5" placeholder="Custom amount">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Direct My Support To:</label>
+            <select class="form-control">
+              <option value="where-needed-most">Where Needed Most (Emergency Response)</option>
+              <option value="girls-education">Girls' Schooling &amp; Scholarship Fund</option>
+              <option value="micro-grants">Women's Entrepreneurship &amp; Micro-Grants</option>
+              <option value="maternal-health">Maternal Healthcare &amp; Trauma Recovery</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Full Name <span class="required">*</span></label>
+            <input type="text" class="form-control" placeholder="Rebecca Juma" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Email Address <span class="required">*</span></label>
+            <input type="email" class="form-control" placeholder="rebeccajuma65@gmail.com" required>
+          </div>
+
+          <button type="submit" class="btn btn-gold btn-lg" style="width:100%; margin-top:8px;">
+            Complete Secure Donation &rarr;
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
+
